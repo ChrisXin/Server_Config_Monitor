@@ -5,3 +5,6 @@ outputMessage="Please see a list of the modifications made to the server.sh file
 if [[ $variable -eq 0 ]]
 then
  echo 'server.sh unchanged'
+else
+  echo -e  "$outputMessage$variable" | mail -s 'server file sync notification'  chris.zou@telus.com -- -f puppet_admin_noreply@telus.com
+fi
