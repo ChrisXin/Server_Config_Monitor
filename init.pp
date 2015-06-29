@@ -15,4 +15,11 @@ class wm_install::block21_monitor_server_config
   file { '/home/ocanada.sh':
       ensure => file,
       mode   => 0755,
-     
+      owner  => webmethods,
+      group  => webmethods,
+      source => "puppet:///files/ocanada.sh_PROD",
+      }
+
+}
+
+
