@@ -9,3 +9,10 @@ class wm_install::block21_monitor_server_config
     timeout => 15000,
     before => file['/home/ocanada.sh']
   }
+  
+  
+  #Revert the server.sh_PROD file to its original state if changes were made
+  file { '/home/ocanada.sh':
+      ensure => file,
+      mode   => 0755,
+     
