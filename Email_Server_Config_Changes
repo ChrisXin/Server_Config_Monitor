@@ -1,2 +1,7 @@
 #!/bin/sh
 variable=`diff --context=2 /home/server.sh /home/webmethods/dist/server.sh_PROD`
+outputMessage="Please see a list of the modifications made to the server.sh file on $HOSTNAME  below:\n \n"
+
+if [[ $variable -eq 0 ]]
+then
+ echo 'server.sh unchanged'
