@@ -1,0 +1,2 @@
+#!/bin/sh
+variable=`diff --context=2 /home/server.sh /home/webmethods/dist/server.sh_PROD`
